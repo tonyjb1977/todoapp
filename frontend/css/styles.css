@@ -1,0 +1,88 @@
+/* For root element */
+:root {
+    --primary: #0c3e38;
+    --primaryHover: #ce8821;
+}
+
+body {
+    transition: background-color 0.5s ease; /* Smooth transition */
+}
+
+/* For header, nav, and footer */
+nav, footer {
+    color: white;
+    background-color: var(--primary);
+}
+
+/* For nav links */
+.nav-link {
+    color: white;
+}
+
+/* For hover effect on nav links */
+.nav-link:hover {
+    color: var(--primaryHover);
+}
+
+/* For body and page styles */
+body {
+    background-color: var(--primary);
+}
+
+/* For page content */
+.page {
+    min-height: 90vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding: 20px;
+    animation: slideUp 1s forwards;
+    opacity: 0;
+}
+
+/* For background image */
+.bg-img {
+    min-height: 90vh;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(/frontend/images/hands-in-background.gif);
+    background-blend-mode: overlay;
+    background-color: rgb(94, 43, 43);
+}
+
+/* For page header */
+.pageHeader {
+    background-color: white;
+    color: var(--primary);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    animation: slideUp 1s forwards;
+    opacity: 0;
+}
+
+/* For page header text */
+@keyframes slideUp{
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.slideUp {
+    opacity: 0;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
