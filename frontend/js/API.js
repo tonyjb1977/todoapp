@@ -1,7 +1,8 @@
 // ---------------------------------------------- Global variables ----------------------------------------------
 const taskForm = document.getElementById('taskForm'); // The form for creating new tasks
 const editTaskForm = document.getElementById('editTaskForm'); // The form for editing existing tasks
-const url = 'http://localhost:3000'; // The base URL for the API
+// const url = 'http://localhost:3000'; // The base URL for the API
+const url = 'https://todoapp-e4g9.onrender.com'; // The base URL for the API in production
 
 // ---------------------------------------------- General Functions ----------------------------------------------
 // This function resets the task form after a task is created or edited.
