@@ -13,7 +13,14 @@ const app = express(); // Create an Express application instance
 // -------------------------- Middleware Configuration ------------------------
 app.use(express.json()); // Parse incoming JSON requests
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded data
-app.use(cors('*')); // Enable CORS for all origins
+
+const corsOptions = {
+  origin: 'https://todoapp-eight-ecru.vercel.app/', // Allow all origins to access the API
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Allow specific HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  credentials: true // Allow credentials to be included in requests
+};
+app.use(cors(corsOptions)); // Enable CORS with the defined options
 
 // -------------------------- Database Configuration + APP STARTUP ------------------------
 // This is where you would connect to your MongoDB database.
