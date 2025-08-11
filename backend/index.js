@@ -15,9 +15,9 @@ app.use(express.json()); // Parse incoming JSON requests
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded data
 
 const corsOptions = {
-  origin: 'https://todoapp-eight-ecru.vercel.app/', // Allow all origins to access the API
+  origin: 'https://todoapp-eight-ecru.vercel.app', // Allow all origins to access the API
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Allow specific HTTP methods
-  // allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
   credentials: true // Allow credentials to be included in requests
 };
 app.use(cors(corsOptions)); // Enable CORS with the defined options
